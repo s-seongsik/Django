@@ -1,6 +1,7 @@
-#### :link: Django 공식문서 참고 
-: https://docs.djangoproject.com/ko/3.1/
-: https://www.django-rest-framework.org/
+#### :link: Django 공식문서 참고 : https://docs.djangoproject.com/ko/3.1/
+#### :link: Django REST API : https://www.django-rest-framework.org/
+#### :link: Django Girls : https://tutorial.djangogirls.org/ko/
+#### :link: Django 자습 : https://wikidocs.net/book/837
 -----------------------------
 
 ## :one: Django 설치하기
