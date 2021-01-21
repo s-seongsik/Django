@@ -37,3 +37,35 @@ print(django.get_version())
 3.1.5
 ~~~
 -----------------------------
+### 3. 가상환경 생성(window 10)
+- Anaconda
+- virtualenv(사용, 독립적)
+
+~~~
+[python 버전 확인]
+D:\Django>python
+Python 3.8.3 (default, Jul  2 2020, 17:30:36) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+
+[virtualenv 설치]
+> pip install virtualenv
+
+[가상환경 생성]
+가상환경을 생성할 디렉토리로 이동 후 시작.
+> virtualenv venv
+
+[가상환경 활성화]
+> call venv/scripts/activate
+
+[가상환경 비활성화]
+> deactivate
+[가상환경 사용법]
+- 설치된 python 버전 확인
+> python --version
+
+[가상활경 활성화 후 패키지 설치 및 관리]
+> pip install 패키지명
+> pip list 
+등 관련 문법 서치
+~~~
+
