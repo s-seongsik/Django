@@ -1,5 +1,6 @@
-#### :link: Django 공식문서 참고 : https://docs.djangoproject.com/ko/3.1/
-
+#### :link: Django 공식문서 참고 
+: https://docs.djangoproject.com/ko/3.1/
+: https://www.django-rest-framework.org/
 -----------------------------
 
 ## :one: Django 설치하기
