@@ -1,9 +1,11 @@
 #### :link: Django 공식문서 참고 : https://docs.djangoproject.com/ko/3.1/
-
+#### :link: Django REST API : https://www.django-rest-framework.org/
+#### :link: Django Girls : https://tutorial.djangogirls.org/ko/
+#### :link: Django 자습 : https://wikidocs.net/book/837
 -----------------------------
 
 ## :one: Django 설치하기
-### 1. Django를 사용하기 위한 파이썬 버전 지원
+1. Django를 사용하기 위한 파이썬 버전 지원
 ~~~
 장고 버전	파이썬 버전들
 1.11	  2.7, 3.4, 3.5, 3.6, 3.7(1.11.17에 추가됨)
