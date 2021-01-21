@@ -18,7 +18,7 @@
 - 장고 1.11은 파이썬 2.7을 지원하는 마지막 버전입니다. 파이썬 2.7과 Django1.11에 대한 지원은 2020년에 끝납니다.
 대게 새로운 파이썬 버전이 빠르고, 기능도 많고, 더 많은 지원을 하기 떄문에 가장 최근 파이썬 3 버전을 추천합니다.
 
-### 2. Django 설치
+### :two: Django 설치
 ~~~
 방법 1. 
 - Anaconda 설치
@@ -37,7 +37,7 @@ print(django.get_version())
 3.1.5
 ~~~
 -----------------------------
-### 3. 가상환경 생성(window 10)
+### :three: 가상환경 생성(window 10)
 - Anaconda
 - virtualenv(사용, 독립적)
 
@@ -69,3 +69,19 @@ Type "help", "copyright", "credits" or "license" for more information.
 등 관련 문법 서치
 ~~~
 
+### :four: Django 기본 프로젝트 생성
+- 프로젝트를 생성할 디렉토리로 이동 후.
+~~~
+> django-admin startproject name
+~~~
+~~~
+project/
+    name/
+        name/
+            __init__.py
+            settings.py
+            urls.py
+            wsgi.py
+        manage.py            
+    venv/
+~~~
