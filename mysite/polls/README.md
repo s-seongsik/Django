@@ -41,3 +41,24 @@ INSTALLED_APPS = [
     'polls.apps.PollsConfig'
 ]
 ~~~
+
+## :three: 첫 번째 뷰 작성 및 실행
+> 1. polls/views.py
+> ~~~python
+> from django.http import HttpResponse
+> 
+> def index(request):
+>     return HttpResponse("Hello, world. You're at the polls index.")
+> ~~~
+
+> 2. URLconf 생성 (뷰 호출) - polls 디렉토리에서 URLconf를 생성하려면, **urls.py** 파일을 생성
+> ~~~python
+> from django.urls import path
+> 
+> from . import views
+> 
+> urlpatterns = [
+>     # 하위 URL 추가가능
+>     path('', views.index, name='index'),
+> ]
+> ~~~

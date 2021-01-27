@@ -72,4 +72,4 @@ Type "help", "copyright", "credits" or "license" for more information.
 ### :four: Django 시작하기
 * [프로젝트 생성](https://github.com/s-seongsik/Django/tree/master/mysite)
 * [어플리케이션 생성 및 등록](https://github.com/s-seongsik/Django/tree/master/mysite/polls)
-* [첫 번째 뷰 작성](https://github.com/s-seongsik/Django/tree/master/mysite/polls)
+* [첫 번째 뷰 작성 및 실행](https://github.com/s-seongsik/Django/tree/master/mysite/polls)
