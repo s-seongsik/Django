@@ -71,4 +71,4 @@ Type "help", "copyright", "credits" or "license" for more information.
 -----------------------------
 ### :four: Django 시작하기
 * [STEP1) 프로젝트 생성](https://github.com/s-seongsik/Django/tree/master/mysite)
-* [STEP2) 기본 APP 디렉토리 구조 생성하기](https://github.com/s-seongsik/Django/tree/master/STEP2/mysite)
+* [STEP2) 기본 APP 디렉토리 구조 생성하기](https://github.com/s-seongsik/Django/tree/master/mysite/polls)
