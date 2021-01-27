@@ -43,22 +43,39 @@ INSTALLED_APPS = [
 ~~~
 
 ## :three: 첫 번째 뷰 작성 및 실행
-> 1. polls/views.py
-> ~~~python
-> from django.http import HttpResponse
-> 
-> def index(request):
->     return HttpResponse("Hello, world. You're at the polls index.")
-> ~~~
+1. polls/views.py
+~~~python
+from django.http import HttpResponse
 
-> 2. URLconf 생성 (뷰 호출) - polls 디렉토리에서 URLconf를 생성하려면, **urls.py** 파일을 생성
-> ~~~python
-> from django.urls import path
-> 
-> from . import views
-> 
-> urlpatterns = [
->     # 하위 URL 추가가능
->     path('', views.index, name='index'),
-> ]
-> ~~~
+def index(request):
+    return HttpResponse("Hello, world. You're at the polls index.")
+~~~
+
+2. polls/urls.py
+    - URLconf 생성 (뷰 호출) - polls 디렉토리에서 URLconf를 생성하려면, **urls.py** 파일을 생성
+~~~python
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+]
+~~~
+
+3. mysite/urls.py
+    - 최상위 URLconf 에서 polls.urls 모듈을 바라보게 설정
+    - 다른 URL 패턴을 포함할 때마다 항상 include()를 사용해야 합니다. admin.site.urls가 유일한 예외
+~~~python
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('polls/', include('polls.urls')),
+    path('admin/', admin.site.urls),
+]
+~~~
+
+4. path 함수 기능
+- route, view, kwargs, name 4개의 인수 포함
+    
