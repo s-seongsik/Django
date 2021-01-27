@@ -1,4 +1,5 @@
 ### :one: Django 프로젝트 생성하기
+
 프로젝트를 생성할 디렉토리로 이동 후.
 ~~~
 > django-admin startproject mysite
