@@ -29,6 +29,11 @@ password : wizcore!0
 Password (again): wizcore!0
 The password is too similar to the email address.
 Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
 ~~~
 
 생성 전
+![image](https://user-images.githubusercontent.com/52439201/106090185-f2097380-616c-11eb-91ba-775fa946f814.png)
+
+생성 후 
+![image](https://user-images.githubusercontent.com/52439201/106090233-11080580-616d-11eb-8060-c1aff95183f9.png)
