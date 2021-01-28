@@ -76,11 +76,19 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'seongsik',
+        'USER': 'sa',
+        'PASSWORD': 'wizcore',
+        'HOST': '192.168.100.166',
+        'PORT': '1433',
+        'OPTIONS': {
+            'driver': 'SQL Server Native Client 11.0',
+            'MARS_Connection': True,
+            'driver_supports_utf8': True,
+        },
+    },
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

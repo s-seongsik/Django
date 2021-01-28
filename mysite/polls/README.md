@@ -78,4 +78,48 @@ urlpatterns = [
 
 4. path 함수 기능
 - route, view, kwargs, name 4개의 인수 포함
+
+
+5. 모델 생성/활성화/테이블 
+    - 모델 생성 : polls/models.py
+    ~~~python
+    from django.db import models
     
+    
+    class Question(models.Model):
+        question_text = models.CharField(max_length=200)
+        pub_date = models.DateTimeField('date published')
+    
+    
+    class Choice(models.Model):
+        question = models.ForeignKey(Question, on_delete=models.CASCADE)
+        choice_text = models.CharField(max_length=200)
+        votes = models.IntegerField(default=0)
+    ~~~
+   - 모델 활성화
+   ~~~python
+   # 가장 먼저, 현재 프로젝트에게 polls앱이 설치되었다고 등록해야 함.
+   # mysite/settings.py -> INSTALLED_APPS에 'polls.apps.PollsConfig' 추가
+   
+   INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    ]
+   ~~~
+   Django는 polls 앱이 포함된 것을 알게 되었습니다. 다른 명령을 내려봅시다.
+   ~~~commandline
+   > python manage.py makemigrations polls
+   ~~~
+   다음과 같은 결과가 나옵니다.
+   ~~~commandline
+   Migrations for 'polls':
+   polls\migrations\0001_initial.py
+    - Create model Choice
+    - Create model Question
+    - Add field question to choice
+   ~~~
