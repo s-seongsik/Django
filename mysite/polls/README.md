@@ -79,53 +79,54 @@ urlpatterns = [
 4. path 함수 기능
 - route, view, kwargs, name 4개의 인수 포함
 
+## :four: 모델 생성/활성화/테이블 등록
+- 모델 생성 : polls/models.py
+~~~python
+from django.db import models
 
-5. 모델 생성/활성화/테이블 등록
-    - 모델 생성 : polls/models.py
-    ~~~python
-    from django.db import models
-    
-    
-    class Question(models.Model):
-        question_text = models.CharField(max_length=200)
-        pub_date = models.DateTimeField('date published')
-    
-    
-    class Choice(models.Model):
-        question = models.ForeignKey(Question, on_delete=models.CASCADE)
-        choice_text = models.CharField(max_length=200)
-        votes = models.IntegerField(default=0)
-    ~~~
-   - 모델 활성화
-   ~~~python
-   # 가장 먼저, 현재 프로젝트에게 polls앱이 설치되었다고 등록해야 함.
-   # mysite/settings.py -> INSTALLED_APPS에 'polls.apps.PollsConfig' 추가
-   
-   INSTALLED_APPS = [
-    'polls.apps.PollsConfig',
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    ]
-   ~~~
-   Django는 polls 앱이 포함된 것을 알게 되었습니다. 다른 명령을 내려봅시다.
-   ~~~commandline
-   > python manage.py makemigrations polls
-   ~~~
-   다음과 같은 결과가 나옵니다.
-   ~~~commandline
-   Migrations for 'polls':
-   polls\migrations\0001_initial.py
-    - Create model Choice
-    - Create model Question
-    - Add field question to choice
-   ~~~
-   makemigrations 을 실행시킴으로서, 당신이 모델을 변경시킨 사실과(이 경우에는 새로운 모델을 만들었습니다) 이 변경사항을 migration으로 저장시키고 싶다는 것을 Django에게 알려줍니다.
-   
-   마지막으로, migrate 명령을 통해 아직 적용되지 않은 마이그레이션을 모두 수집해 이를 실행하며(Django는 django_migrations 테이블을 두어 마이그레이션 적용 여부를 추적합니다) 이 과정을 통해 모델에서의 변경 사항들과 데이터베이스의 스키마의 동기화가 이루어집니다.
-   ~~~commandline
-   > python manage.py migrate
-   ~~~
+
+class Question(models.Model):
+    question_text = models.CharField(max_length=200)
+    pub_date = models.DateTimeField('date published')
+
+
+class Choice(models.Model):
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    choice_text = models.CharField(max_length=200)
+    votes = models.IntegerField(default=0)
+~~~
+
+- 모델 활성화
+~~~python
+# 가장 먼저, 현재 프로젝트에게 polls앱이 설치되었다고 등록해야 함.
+# mysite/settings.py -> INSTALLED_APPS에 'polls.apps.PollsConfig' 추가
+
+INSTALLED_APPS = [
+'polls.apps.PollsConfig',
+'django.contrib.admin',
+'django.contrib.auth',
+'django.contrib.contenttypes',
+'django.contrib.sessions',
+'django.contrib.messages',
+'django.contrib.staticfiles',
+]
+~~~
+
+Django는 polls 앱이 포함된 것을 알게 되었습니다. 다른 명령을 내려봅시다.
+~~~commandline
+> python manage.py makemigrations polls
+~~~
+다음과 같은 결과가 나옵니다.
+~~~commandline
+Migrations for 'polls':
+polls\migrations\0001_initial.py
+- Create model Choice
+- Create model Question
+- Add field question to choice
+~~~
+makemigrations 을 실행시킴으로서, 당신이 모델을 변경시킨 사실과(이 경우에는 새로운 모델을 만들었습니다) 이 변경사항을 migration으로 저장시키고 싶다는 것을 Django에게 알려줍니다.
+
+마지막으로, migrate 명령을 통해 아직 적용되지 않은 마이그레이션을 모두 수집해 이를 실행하며(Django는 django_migrations 테이블을 두어 마이그레이션 적용 여부를 추적합니다) 이 과정을 통해 모델에서의 변경 사항들과 데이터베이스의 스키마의 동기화가 이루어집니다.
+~~~commandline
+> python manage.py migrate
+~~~
