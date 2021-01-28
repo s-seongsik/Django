@@ -80,7 +80,7 @@ urlpatterns = [
 - route, view, kwargs, name 4개의 인수 포함
 
 
-5. 모델 생성/활성화/테이블 
+5. 모델 생성/활성화/테이블 등록
     - 모델 생성 : polls/models.py
     ~~~python
     from django.db import models

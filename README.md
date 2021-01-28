@@ -73,3 +73,4 @@ Type "help", "copyright", "credits" or "license" for more information.
 * [프로젝트 생성](https://github.com/s-seongsik/Django/tree/master/mysite)
 * [어플리케이션 생성 및 등록](https://github.com/s-seongsik/Django/tree/master/mysite/polls)
 * [첫 번째 뷰 작성 및 실행](https://github.com/s-seongsik/Django/tree/master/mysite/polls)
+* [모델 생성/활성화/테이블 등록](https://github.com/s-seongsik/Django/tree/master/mysite/polls)
