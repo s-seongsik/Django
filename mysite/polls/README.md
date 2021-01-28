@@ -123,3 +123,9 @@ urlpatterns = [
     - Create model Question
     - Add field question to choice
    ~~~
+   makemigrations 을 실행시킴으로서, 당신이 모델을 변경시킨 사실과(이 경우에는 새로운 모델을 만들었습니다) 이 변경사항을 migration으로 저장시키고 싶다는 것을 Django에게 알려줍니다.
+   
+   마지막으로, migrate 명령을 통해 아직 적용되지 않은 마이그레이션을 모두 수집해 이를 실행하며(Django는 django_migrations 테이블을 두어 마이그레이션 적용 여부를 추적합니다) 이 과정을 통해 모델에서의 변경 사항들과 데이터베이스의 스키마의 동기화가 이루어집니다.
+   ~~~commandline
+   > python manage.py migrate
+   ~~~
