@@ -1,6 +1,6 @@
 # Django 관리자
 > 관리자 사이트는 사이트 방문자를 위한 것이 아닌, 사이트 관리자를 위한 기능입니다.
--------------------------
+--------------------------------------------------
 
 ## :one: 관리자 생성하기
 
@@ -33,3 +33,15 @@ Superuser created successfully.
 
 생성 후 
 ![image](https://user-images.githubusercontent.com/52439201/106090233-11080580-616d-11eb-8060-c1aff95183f9.png)
+--------------------------------------------------
+
+## :two: 관리자 사이트에서 app 변경할 수 있도록 설정하기.
+> 생성한 polls의 app을 admin에 등록시켜야 합니다.
+
+polls/admin.py
+~~~python
+from django.contrib import admin
+from .models import Question
+
+admin.site.register(Question)
+~~~

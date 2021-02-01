@@ -54,6 +54,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 가상환경을 생성할 디렉토리로 이동 후 시작.
 > virtualenv venv
 
+
 [가상환경 활성화]
 > call venv/scripts/activate
 
