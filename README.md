@@ -2,7 +2,7 @@
 #### :link: Django REST API : https://www.django-rest-framework.org/
 #### :link: Django Girls : https://tutorial.djangogirls.org/ko/
 #### :link: Django 자습 : https://wikidocs.net/book/837
-### :link: Django 점프 투  : https://wikidocs.net/book/4223
+#### :link: Django 점프 투  : https://wikidocs.net/book/4223
 -----------------------------
 
 ## :one: Django 설치하기
